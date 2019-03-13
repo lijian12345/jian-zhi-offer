@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "xtree": "cpp",
+        "queue": "cpp",
+        "algorithm": "cpp",
+        "deque": "cpp"
+    }
+}
