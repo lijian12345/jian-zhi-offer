@@ -18,7 +18,7 @@ def duplicate(numbers, duplication):
         return False
 
 
-L = [2, 3, 5, 4, 3, 2, 6, 7]
-LL = [0]
-duplicate(L, LL)
-print(LL)
+# L = [2, 3, 5, 4, 3, 2, 6, 7]
+# LL = [0]
+# duplicate(L, LL)
+# print(LL)
