@@ -3,6 +3,7 @@
         "xtree": "cpp",
         "queue": "cpp",
         "algorithm": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "vector": "cpp"
     }
 }
