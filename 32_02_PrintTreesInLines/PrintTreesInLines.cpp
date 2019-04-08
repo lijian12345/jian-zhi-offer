@@ -54,3 +54,33 @@ class Solution
         }
     }
 };
+
+class Solution1
+{
+  public:
+    vector<vector<int>> Print(TreeNode *pRoot)
+    {
+        vector<vector<int>> ans;
+        if (pRoot == nullptr)
+            return ans;
+        queue<TreeNode *> q;
+        q.push(pRoot);
+        while (!q.empty())
+        {
+            int size = q.size();
+            vector<int> levelElem;
+            while (size--)
+            {
+                TreeNode *t = q.front();
+                q.pop();
+                levelElem.push_back(t->val);
+                if (t->left)
+                    q.push(t->left);
+                if (t->right)
+                    q.push(t->right);
+            }
+            ans.push_back(levelElem);
+        }
+        return ans;
+    }
+};

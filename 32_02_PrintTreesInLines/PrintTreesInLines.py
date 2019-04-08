@@ -28,10 +28,31 @@ class Solution:
                 nextLevel = 0
 
 
+class Solution1:
+    def Print(self, pRoot):
+        # write code here
+        if not pRoot:
+            return []
+        L = []
+        queue = [pRoot]
+        while queue:
+            levelElem = []
+            for i in queue:
+                levelElem.append(i.val)
+            L.append(levelElem)
+            for i in range(len(queue)):
+                root = queue.pop(0)
+                if root.left:
+                    queue.append(root.left)
+                if root.right:
+                    queue.append(root.right)
+        return L
+
+
 t1 = TreeNode(8)
 t2 = TreeNode(6)
 t3 = TreeNode(10)
 t1.left = t2
 t1.right = t3
-s = Solution()
-print(s.PrintInLines(t1))
+s = Solution1()
+print(s.Print(t1))
