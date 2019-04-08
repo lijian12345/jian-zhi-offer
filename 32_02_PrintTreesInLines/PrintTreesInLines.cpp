@@ -84,3 +84,15 @@ class Solution1
         return ans;
     }
 };
+
+int main()
+{
+    TreeNode *t1 = new TreeNode(8);
+    TreeNode *t2 = new TreeNode(6);
+    TreeNode *t3 = new TreeNode(10);
+    t1->left = t2;
+    t1->right = t3;
+    Solution s = Solution();
+    s.PrintInLines(t1);
+    return 0;
+}
