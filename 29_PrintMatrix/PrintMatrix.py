@@ -26,3 +26,14 @@ class Solution:
                 if matrix[l][o] not in res
             ]
         return res
+
+
+class Solution1:
+    def printMatrix(self, matrix):
+        return list(matrix[0]) + self.printMatrix(
+            list(reversed(list(zip(*matrix[1:]))))) if matrix else []
+
+
+array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+s = Solution1()
+print(s.printMatrix(array))
